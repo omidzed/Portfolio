@@ -1,6 +1,11 @@
-const details: string = `A full-stack web application built with React, TypeScript, Tailwind CSS and Vite on the front-end; Node.js, Express.js, and PostgreSQL on the back-end, while utilizing the
-				flexibility & reliability of AWS EC2 for deployment.`;
+type Props = {
+	className?: string;
+};
 
-export const About = () => {
-	return <div className="text-3xl">{details}</div>;
+const details: string = `I am a Full Stack Developer specializing in React, TypeScript, Node.js, PostgreSQL, and AWS. My current
+interests include Next.js and Python. I have about 2 years of experience in the industry and I have built
+applications related to sports betting, cryptocurrency, and a productivity journal software.`;
+
+export const About = ({ className = '' }: Props) => {
+	return <div className={`text-xl ${className}`}>{details}</div>;
 };
