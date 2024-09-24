@@ -1,15 +1,16 @@
 type Props = {
 	className?: string;
 };
+
 export const SideBar = ({ className = '' }: Props) => {
 	return (
-		<div className={`flex flex-col  ${className}`}>
+		<div className={`flex flex-col items-center  ${className}`}>
 			<img
-				className='w-44'
-				src='public\profile.png'
+				className='w-44 m-8'
+				src='/profile.png'
 				alt='profile-image'></img>
-			<span className='text-black font-semibold text-4xl whitespace-nowrap w-28 text-center'>Omid Asadi</span>
-			<span className='whitespace-nowrap text-xl text-center w-28'>Full Stack Developer</span>
+			<span className='font-semibold text-2xl lg:text-4xl whitespace-nowrap'>Omid Asadi</span>
+			<span className='whitespace-nowrap text-sm lg:text-xl text-center'>Full Stack Developer</span>
 		</div>
 	);
 };

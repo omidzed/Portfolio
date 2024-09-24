@@ -16,7 +16,7 @@ export const Contact = () => {
 	}, [state.succeeded, reset]);
 
 	return (
-		<>
+		<div className='flex justify-center'>
 			{showModal && (
 				<div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center'>
 					<div className='bg-white p-6 rounded shadow-lg'>
@@ -26,14 +26,18 @@ export const Contact = () => {
 			)}
 			<form
 				onSubmit={handleSubmit}
-				className='flex flex-col w-1/2 mt-10'>
-				<label htmlFor='name'>Name</label>
+				className='flex flex-col gap-2 my-10 w-5/6'>
+				<label
+					className='font-medium'
+					htmlFor='name'>
+					Name
+				</label>
 				<input
 					id='name'
 					type='text'
 					name='name'
 					aria-label='Name'
-					className='mt-1 p-2 border rounded'
+					className=' p-2 rounded-md'
 				/>
 				<ValidationError
 					prefix='Name'
@@ -41,7 +45,7 @@ export const Contact = () => {
 					errors={state.errors}
 				/>
 				<label
-					className='mt-4'
+					className='mt-2 font-medium'
 					htmlFor='email'>
 					Email Address
 				</label>
@@ -50,7 +54,7 @@ export const Contact = () => {
 					type='email'
 					name='email'
 					aria-label='Email Address'
-					className='mt-1 p-2 border rounded'
+					className='p-2  rounded-md'
 				/>
 				<ValidationError
 					prefix='Email'
@@ -58,7 +62,7 @@ export const Contact = () => {
 					errors={state.errors}
 				/>
 				<label
-					className='mt-4'
+					className='font-medium mt-2'
 					htmlFor='message'>
 					Message
 				</label>
@@ -66,7 +70,8 @@ export const Contact = () => {
 					id='message'
 					name='message'
 					aria-label='Message'
-					className='mt-1 p-2 border rounded'
+					style={{ height: '150px' }}
+					className=' p-2 rounded-md text-black h-32'
 				/>
 				<ValidationError
 					prefix='Message'
@@ -76,10 +81,10 @@ export const Contact = () => {
 				<button
 					type='submit'
 					disabled={state.submitting}
-					className='mt-8 px-4 py-2 mx-20 bg-green-500 text-white rounded hover:bg-green-600 disabled:bg-gray-300'>
+					className='mt-4 px-4 py-2 mx-20 bg-green-600 text-white font-medium rounded hover:bg-green-600 disabled:bg-gray-300'>
 					Submit
 				</button>
 			</form>
-		</>
+		</div>
 	);
 };

@@ -6,7 +6,7 @@ import { Contact } from './Contact';
 
 function App() {
 	return (
-		<>
+		<div>
 			<NavBar />
 			<Routes>
 				<Route
@@ -22,7 +22,7 @@ function App() {
 					element={<Contact />}
 				/>
 			</Routes>
-		</>
+		</div>
 	);
 }
 
