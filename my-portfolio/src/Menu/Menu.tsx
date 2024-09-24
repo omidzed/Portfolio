@@ -10,7 +10,7 @@ export const Menu = ({ onSelect, toggleMenu, menuItems }: MenuProps) => {
 	const menuItemsList = menuItems.map(menuItem => (
 		<li
 			key={menuItem.title}
-			className='border px-8  py-1 rounded-3xl text-center'
+			className='border px-12  py-1 rounded-3xl text-center'
 			onClick={() => onSelect(menuItem.path)}>
 			<div>
 				<span>{menuItem.title}</span>

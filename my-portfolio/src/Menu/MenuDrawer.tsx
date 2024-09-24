@@ -42,20 +42,20 @@ export const AppDrawer = ({ isOpen, toggleMenu, menuItems }: AppDrawerProps) => 
 	};
 
 	return (
-		<div className={`fixed top-0 left-0 h-screen z-50 transition-transform duration-700 ease-in-out bg-[#08102d] ${isOpen ? 'translate-x-0' : '-translate-x-full'} `}>
+		<div className={`fixed w-[80%] top-0 left-0 h-screen z-50 transition-transform duration-700 ease-in-out bg-[#0c1843] ${isOpen ? 'translate-x-0' : '-translate-x-full'} `}>
 			<div className='flex flex-col items-center'>
 				<img
 					src='/profile.png'
 					alt='profile photo'
-					className='w-[42%] mt-12 mb-3'></img>
-				<span className='text-2xl tracking-wider'>Omid Asadi</span>
-				<span className='text-sm tracking-wide'>Full Stack Developer</span>
-				<div className='flex gap-1 mt-2'>
-					<FaReact size={22} />
-					<SiTypescript size={21} />
-					<FaNodeJs size={22} />
-					<BiLogoPostgresql size={24} />
-					<FaAws size={25} />
+					className='w-[48%] mt-10 mb-3'></img>
+				<span className='text-3xl tracking-wide'>Omid Asadi</span>
+				<span className='text-lg'>Full Stack Developer</span>
+				<div className='flex gap-2 mt-2'>
+					<FaReact size={24} />
+					<SiTypescript size={23} />
+					<FaNodeJs size={24} />
+					<BiLogoPostgresql size={26} />
+					<FaAws size={27} />
 				</div>
 				<div className={'drawer-container'}>
 					<div className={isOpen ? 'hidden' : 'hamburger-container'}></div>
