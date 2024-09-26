@@ -1,7 +1,11 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { useState, useEffect } from 'react';
 
-export const Contact = () => {
+type ContactProps = {
+	isDark: boolean;
+};
+
+export const Contact = (isDark: ContactProps) => {
 	const [state, handleSubmit, reset] = useForm('xnnakdde');
 	const [showModal, setShowModal] = useState(false);
 
@@ -16,7 +20,7 @@ export const Contact = () => {
 	}, [state.succeeded, reset]);
 
 	return (
-		<div className='flex justify-center'>
+		<div className={`flex justify-center ${isDark ? 'bg-[#0c1843] text-white' : 'bg-white text-[#0c1843]'}`}>
 			{showModal && (
 				<div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center'>
 					<div className='bg-white p-6 rounded shadow-lg'>

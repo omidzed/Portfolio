@@ -1,5 +1,6 @@
 type Props = {
 	className?: string;
+	isDark: boolean;
 };
 
 const details: string = `I am a Full Stack Developer specializing in React, TypeScript, Node.js, PostgreSQL, and AWS. My current

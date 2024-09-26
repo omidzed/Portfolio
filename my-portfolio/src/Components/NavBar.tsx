@@ -2,10 +2,15 @@ import { useState } from 'react';
 import { Spin as Hamburger } from 'hamburger-react';
 import { AppDrawer } from './Menu/MenuDrawer';
 import { Overlay } from './Menu/Overlay';
-import { MenuItem } from './utils/data-types';
+import { MenuItem } from '../utils/data-types';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { useDarkMode } from '../Hooks/useDarkMode';
 
 export const NavBar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+
+	const { isDark, toggleDarkMode } = useDarkMode();
+
 	const toggleMenu = () => setIsOpen(prev => !prev);
 
 	const menuItems: MenuItem[] = [
@@ -15,32 +20,39 @@ export const NavBar = () => {
 		{ title: 'Projects', path: '/projects' },
 		{ title: 'Contact', path: '/contact' },
 	];
+
 	return (
-		<div className='block sm:hidden'>
+		<div className={`flex justify-between items-center lg:mr-10 lg:mt-10 ${isDark ? 'bg-[#0c1843] white' : 'bg-white [#0c1843]'}`}>
 			{isOpen && (
 				<Overlay
 					onClick={toggleMenu}
 					isOpen={isOpen}
 				/>
 			)}
-			<nav className={styles.nav}>
-				{isOpen && (
+			<Hamburger
+				size={20}
+				toggled={isOpen}
+				toggle={setIsOpen}
+				color={isDark ? 'white' : '#0c1843'}
+			/>
+			{isOpen && (
+				<div>
 					<AppDrawer
 						toggleMenu={toggleMenu}
 						isOpen={isOpen}
 						menuItems={menuItems}
+						isDark={isDark}
 					/>
-				)}
-				<Hamburger
-					size={20}
-					toggled={isOpen}
-					toggle={setIsOpen}
-				/>
-			</nav>
+				</div>
+			)}
+			<DarkModeSwitch
+				className='mr-2'
+				checked={!isDark}
+				onChange={toggleDarkMode}
+				size={25}
+				moonColor='#0c1843'
+				sunColor='yellow'
+			/>
 		</div>
 	);
-};
-
-const styles = {
-	nav: 'flex md:py-2 md:pr-10 mb-1 pr-2',
 };

@@ -1,21 +1,19 @@
 import { Menu } from './Menu';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import { MenuItem } from '../utils/data-types';
-import { FaArrowLeft } from 'react-icons/fa';
+import { MenuItem } from '../../utils/data-types';
+import { FaArrowLeft, FaReact, FaAws, FaNodeJs } from 'react-icons/fa';
 import { SiTypescript } from 'react-icons/si';
-import { FaReact } from 'react-icons/fa';
 import { BiLogoPostgresql } from 'react-icons/bi';
-import { FaAws } from 'react-icons/fa';
-import { FaNodeJs } from 'react-icons/fa';
 
 type AppDrawerProps = {
 	isOpen: boolean;
 	toggleMenu: () => void;
 	menuItems: MenuItem[];
+	isDark: boolean;
 };
 
-export const AppDrawer = ({ isOpen, toggleMenu, menuItems }: AppDrawerProps) => {
+export const AppDrawer = ({ isOpen, toggleMenu, menuItems, isDark }: AppDrawerProps) => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
@@ -42,7 +40,10 @@ export const AppDrawer = ({ isOpen, toggleMenu, menuItems }: AppDrawerProps) => 
 	};
 
 	return (
-		<div className={`fixed w-[80%] top-0 left-0 h-screen z-50 transition-transform duration-700 ease-in-out bg-[#0c1843] ${isOpen ? 'translate-x-0' : '-translate-x-full'} `}>
+		<div
+			className={`fixed w-[80%] top-0 left-0 h-screen z-50 transition-transform duration-700 ease-in-out bg-[#0c1843]
+			${isOpen ? 'translate-x-0' : '-translate-x-full'}
+			${isDark ? 'bg-[#0c1843] text-white' : 'bg-white text-[#0c1843]'}`}>
 			<div className='flex flex-col items-center'>
 				<img
 					src='/profile.png'
@@ -51,13 +52,28 @@ export const AppDrawer = ({ isOpen, toggleMenu, menuItems }: AppDrawerProps) => 
 				<span className='text-3xl tracking-wide'>Omid Asadi</span>
 				<span className='text-lg'>Full Stack Developer</span>
 				<div className='flex gap-2 mt-2'>
-					<FaReact size={24} />
-					<SiTypescript size={23} />
-					<FaNodeJs size={24} />
-					<BiLogoPostgresql size={26} />
-					<FaAws size={27} />
+					<FaReact
+						size={24}
+						className={isDark ? 'text-white' : 'text-blue-600'}
+					/>
+					<SiTypescript
+						size={23}
+						className={isDark ? 'text-white' : 'text-blue-600'}
+					/>
+					<FaNodeJs
+						size={24}
+						className={isDark ? 'text-white' : 'text-blue-600'}
+					/>
+					<BiLogoPostgresql
+						size={26}
+						className={isDark ? 'text-white' : 'text-blue-600'}
+					/>
+					<FaAws
+						size={27}
+						className={isDark ? 'text-white' : 'text-blue-600'}
+					/>
 				</div>
-				<div className={'drawer-container'}>
+				<div>
 					<div className={isOpen ? 'hidden' : 'hamburger-container'}></div>
 					<div className={isOpen ? 'menu-drawer open' : 'menu-drawer closed'}>
 						<div className='flex justify-center '>
@@ -65,7 +81,7 @@ export const AppDrawer = ({ isOpen, toggleMenu, menuItems }: AppDrawerProps) => 
 								className='fixed top-6 right-4 cursor-pointer'
 								onClick={() => toggleMenu()}>
 								<FaArrowLeft
-									color='white'
+									color={isDark ? 'white' : 'black'}
 									size={20}
 								/>
 							</div>
@@ -74,6 +90,7 @@ export const AppDrawer = ({ isOpen, toggleMenu, menuItems }: AppDrawerProps) => 
 									toggleMenu={toggleMenu}
 									onSelect={handleSelect}
 									menuItems={menuItems}
+									isDark={isDark}
 								/>
 							</div>
 						</div>
