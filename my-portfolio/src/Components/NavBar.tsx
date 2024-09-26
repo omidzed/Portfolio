@@ -22,7 +22,7 @@ export const NavBar = () => {
 	];
 
 	return (
-		<div className={`flex justify-between lg:justify-end items-center lg:pr-10 lg:pt-10 ${isDark ? 'bg-[#0c1843] white' : 'bg-white [#0c1843]'}`}>
+		<div className={`flex justify-between lg:justify-end items-center p-5 lg:pr-10 lg:pt-10 ${isDark ? 'bg-[#0c1843] white' : 'bg-white [#0c1843]'}`}>
 			{isOpen && (
 				<Overlay
 					onClick={toggleMenu}
