@@ -5,8 +5,9 @@
 body {
 	background-color: #0c1843;
 	color: white;
-	margin: 1.5rem;
-	transition: background-color 0.3s, color 0.3s;
+	transition:
+		background-color 0.3s,
+		color 0.3s;
 }
 
 body.dark-mode {
@@ -14,7 +15,37 @@ body.dark-mode {
 	color: white;
 }
 
-/* @layer base
-  body {
-	@apply bg-white text-[#0c1843] dark:bg-[#0c1843] dark:text-white m-6;
+#omid {
+	font-family: 'Edu AU VIC WA NT Dots', cursive;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* html {
+	background-color: #0c1843;
+	color: white;
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+}
+
+html.light-mode {
+	background-color: white;
+	color: #0c1843;
+} */
+
+/* :root {
+	--bg-color: white;
+	--text-color: #0c1843;
+} */
+
+/* .dark-mode {
+	--bg-color: #0c1843;
+	--text-color: white;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
 } */

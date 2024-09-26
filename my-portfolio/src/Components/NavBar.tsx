@@ -22,19 +22,21 @@ export const NavBar = () => {
 	];
 
 	return (
-		<div className={`flex justify-between items-center lg:mr-10 lg:mt-10 ${isDark ? 'bg-[#0c1843] white' : 'bg-white [#0c1843]'}`}>
+		<div className={`flex justify-between lg:justify-end items-center lg:pr-10 lg:pt-10 ${isDark ? 'bg-[#0c1843] white' : 'bg-white [#0c1843]'}`}>
 			{isOpen && (
 				<Overlay
 					onClick={toggleMenu}
 					isOpen={isOpen}
 				/>
 			)}
-			<Hamburger
-				size={20}
-				toggled={isOpen}
-				toggle={setIsOpen}
-				color={isDark ? 'white' : '#0c1843'}
-			/>
+			<div className="block lg:hidden">
+				<Hamburger
+					size={20}
+					toggled={isOpen}
+					toggle={setIsOpen}
+					color={isDark ? 'white' : '#0c1843'}
+				/>
+			</div>
 			{isOpen && (
 				<div>
 					<AppDrawer

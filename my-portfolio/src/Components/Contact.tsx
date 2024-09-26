@@ -1,13 +1,12 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { useState, useEffect } from 'react';
+import { useDarkMode } from '../Hooks/useDarkMode';
 
-type ContactProps = {
-	isDark: boolean;
-};
-
-export const Contact = (isDark: ContactProps) => {
+export const Contact = () => {
 	const [state, handleSubmit, reset] = useForm('xnnakdde');
 	const [showModal, setShowModal] = useState(false);
+
+	const { isDark } = useDarkMode();
 
 	useEffect(() => {
 		if (state.succeeded) {
@@ -18,6 +17,8 @@ export const Contact = (isDark: ContactProps) => {
 			}, 4000);
 		}
 	}, [state.succeeded, reset]);
+
+	const inputStyle = `p-2 rounded-md ${isDark ? 'bg-white text-black' : 'bg-white text-[#0c1843] border border-[#0c1843]'}`;
 
 	return (
 		<div className={`flex justify-center ${isDark ? 'bg-[#0c1843] text-white' : 'bg-white text-[#0c1843]'}`}>
@@ -41,7 +42,7 @@ export const Contact = (isDark: ContactProps) => {
 					type='text'
 					name='name'
 					aria-label='Name'
-					className=' p-2 rounded-md'
+					className={inputStyle}
 				/>
 				<ValidationError
 					prefix='Name'
@@ -58,7 +59,7 @@ export const Contact = (isDark: ContactProps) => {
 					type='email'
 					name='email'
 					aria-label='Email Address'
-					className='p-2  rounded-md'
+					className={inputStyle}
 				/>
 				<ValidationError
 					prefix='Email'
@@ -75,7 +76,7 @@ export const Contact = (isDark: ContactProps) => {
 					name='message'
 					aria-label='Message'
 					style={{ height: '150px' }}
-					className=' p-2 rounded-md text-black h-32'
+					className={`${inputStyle} p-2 rounded-md text-black h-32`}
 				/>
 				<ValidationError
 					prefix='Message'

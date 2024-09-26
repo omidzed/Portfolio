@@ -3,7 +3,7 @@ import { createContext, useState, ReactNode } from 'react';
 
 export type DarkModeContextValues = {
 	isDark: boolean;
-	toggleDarkMode: () => void;
+	toggleDarkMode: (checked: boolean) => void;
 };
 
 const initialContextValue: DarkModeContextValues = {
@@ -20,7 +20,9 @@ type DarkModeProviderProps = {
 export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) => {
 	const [isDark, setIsDark] = useState(true);
 
-	const toggleDarkMode = () => setIsDark(!isDark);
+	const toggleDarkMode = (checked: boolean) => {
+		setIsDark(!checked);
+	};
 
 	return <DarkModeContext.Provider value={{ isDark, toggleDarkMode }}>{children}</DarkModeContext.Provider>;
 };
