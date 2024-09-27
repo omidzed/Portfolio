@@ -9,7 +9,7 @@ type MenuProps = {
 
 export const Menu = ({ onSelect, toggleMenu, menuItems, isDark }: MenuProps) => {
 	const menuItemsList = menuItems.map(menuItem => (
-		<li
+		<button
 			key={menuItem.title}
 			className={`
 			border  px-12  py-1 rounded-3xl text-center transition-colors duration-300
@@ -19,7 +19,7 @@ export const Menu = ({ onSelect, toggleMenu, menuItems, isDark }: MenuProps) => 
 			<div>
 				<span>{menuItem.title}</span>
 			</div>
-		</li>
+		</button>
 	));
 
 	return (

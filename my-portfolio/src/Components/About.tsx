@@ -1,3 +1,5 @@
+import { useDarkMode } from '../Hooks/useDarkMode';
+
 type Props = {
 	className?: string;
 	isDark: boolean;
@@ -8,16 +10,24 @@ interests include Next.js and Python. I have about 2 years of experience in the 
 applications related to sports betting, cryptocurrency, and a productivity journal software.`;
 
 export const About = ({ className = '' }: Props) => {
+	const { isDark } = useDarkMode();
+
 	return (
-		<div className='flex flex-col items-center mt-5'>
-			<span
-				id='omid'
-				className='text-5xl lg:text-6xl tracking-wide lg:tracking-widest'>
-				Omid Asadi
-			</span>
-			<span className='text-2xl lg:text-4xl mt-1 font-light tracking-wider lg:tracking-wider'>Full Stack Developer</span>
-			<span className='text-sm font-semibold lg:font-light lg:tracking-tight mt-1 lg:text-lg'>[ React | TypeScript | Node | PostgreSQL | AWS ]</span>
-			<div className={`text-sm mt-4 text-justify md:text-xl lg:font-light ${className}`}>{details}</div>
+		<div className={`${isDark ? 'text-white' : 'bg-white text-[#0c1843]'}`}>
+			<div className='flex flex-col items-center mt-5'>
+				<span
+					id='omid'
+					className='text-5xl lg:text-6xl tracking-wide lg:tracking-widest'>
+					Omid Asadi
+				</span>
+				<span className='text-2xl lg:text-4xl mt-1 font-light tracking-wider lg:tracking-wider'>Full Stack Developer</span>
+				<span className='text-sm font-semibold lg:font-light lg:tracking-tight mt-1 lg:text-lg'>[ React | TypeScript | Node | PostgreSQL | AWS ]</span>
+			</div>
+			<div>
+				<h1 className='text-left mt-10'>About</h1>
+				<div className='border-b border-white mt-2'></div>
+				<div className={`text-sm mt-4 text-justify md:text-xl lg:font-light ${className}`}>{details}</div>
+			</div>
 		</div>
 	);
 };
