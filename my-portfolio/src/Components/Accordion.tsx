@@ -22,10 +22,10 @@ export const Accordion = ({ topics }: AccordionProps) => {
 		<div>
 			{categories.map(category => (
 				<div
-					className={`${isDark ? 'border-gray-300' : 'border-[#0c1843]'} border rounded-md`}
+					className={`text-xs md:text-lg ${isDark ? 'border-gray-300' : 'border-gray-500 bg-[#071236] text-white'} border rounded-md hover:bg-blue-600 hover:border-blue-600 font-semibold`}
 					key={category}>
 					<button
-						className='flex justify-between items-center w-full p-2 pl-8 pr-6'
+						className='flex justify-between items-center w-full p-2 pl-6 md:pl-10 pr-4 md:pr-8'
 						onClick={() => handleCategoryClick(category)}>
 						{category}
 						{openCategory === category ? <FaChevronUp /> : <FaChevronDown />}

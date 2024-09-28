@@ -6,16 +6,12 @@ type Props = {
 	isDark: boolean;
 };
 
-const details: string = `I am a Full Stack Developer specializing in React, TypeScript, Node.js, PostgreSQL, and AWS. My current
-interests include Next.js and Python. I have about 2 years of experience in the industry and I have built
-applications related to sports betting, cryptocurrency, and a productivity journal software.`;
-
 export const About = ({ className = '' }: Props) => {
 	const { isDark } = useDarkMode();
 	const resume = '../Resume.pdf';
 
 	return (
-		<div className={`${isDark ? 'bg-[#0c1843] text-white' : 'bg-[#69cdf7] text-[#0c1843]'}`}>
+		<div className={`${isDark ? 'bg-[#071236] text-white' : 'bg-[#7eaed2] text-[#071236]'}`}>
 			<div className='flex flex-col items-center mt-5'>
 				<span
 					id='omid'
@@ -29,7 +25,7 @@ export const About = ({ className = '' }: Props) => {
 						href={'../Resume.pdf'}
 						target='_blank'
 						rel='noopener noreferrer'
-						className={`${isDark ? 'bg-[#0c1843] text-white' : 'bg-[#0c1843] text-[#0c1843]'} mt-8 px-10 py-2 border border-gray-500 hover:scale-105 transition ease-out duration-300 hover:bg-blue-600 hover:border-blue-700 text-white font-semibold rounded-lg`}>
+						className={`${isDark ? 'bg-[#071236] text-white' : 'bg-[#071236] text-white'} mt-8 px-10 py-2 border border-gray-400 hover:scale-105 transition ease-out duration-300 hover:bg-blue-600 hover:border-blue-700 text-white font-semibold rounded-lg`}>
 						View Resume
 					</a>
 				)}
@@ -51,10 +47,14 @@ export const About = ({ className = '' }: Props) => {
 				</a>
 			</div>
 			<div>
-				<div className='mb-2 mt-10 text-lg'>About</div>
-				<div className={`${isDark ? 'border-gray-300' : 'border-[#0c1843]'} border-b mb-10`}></div>
-				<div className={`text-sm mt-4 text-justify md:text-xl lg:font-light ${className}`}>{details}</div>
+				<div className='mb-1 mt-14 md:mt-20 text-2xl'>About</div>
+				<div className={`${isDark ? 'border-gray-300' : 'border-[#071236]'} border-b mb-2`}></div>
+				<div className={`text-sm mt-6 text-justify md:text-xl lg:font-light ${className}`}>
+					I am a Full Stack developer specializing in <strong className='font-bold'>React, TypeScript, Node.js, PostgreSQL</strong>, and <strong className='font-bold'>AWS</strong>.
+					My current interests include <strong className='font-bold'>Next.js</strong> and <strong className="font-bold">Python</strong>. I have about 2 years of experience in the industry and I have built applications
+					related to sports betting, cryptocurrency, and a productivity journal software.
+				</div>
 			</div>
 		</div>
 	);
-};
+}

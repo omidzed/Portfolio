@@ -26,7 +26,7 @@ export const NavBar = ({ onNavClick }: NavBarProps) => {
 	];
 
 	return (
-		<div className={`flex justify-between lg:justify-end items-center p-5 lg:pr-10 lg:pt-10 ${isDark ? 'bg-[#0c1843] text-white' : 'bg-[#69cdf7] text-[#0c1843]'}`}>
+		<div className={`flex justify-between lg:justify-end items-center p-5 lg:pr-10 lg:pt-10 ${isDark ? 'bg-[#071236] text-white' : 'bg-[#7eaed2] text-[#071236]'}`}>
 			{isOpen && (
 				<Overlay
 					onClick={toggleMenu}
@@ -38,7 +38,7 @@ export const NavBar = ({ onNavClick }: NavBarProps) => {
 					size={20}
 					toggled={isOpen}
 					toggle={setIsOpen}
-					color={isDark ? 'white' : '#0c1843'}
+					color={isDark ? 'white' : '#071236'}
 				/>
 			</div>
 			{isOpen && (
@@ -53,11 +53,11 @@ export const NavBar = ({ onNavClick }: NavBarProps) => {
 				</div>
 			)}
 			<DarkModeSwitch
-				className='ml-4'
+				className='mr-4 mt-4'
 				checked={!isDark}
 				onChange={toggleDarkMode}
 				size={25}
-				moonColor='#0c1843'
+				moonColor='#071236'
 				sunColor='yellow'
 			/>
 		</div>

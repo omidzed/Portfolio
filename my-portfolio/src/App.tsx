@@ -10,7 +10,7 @@ const AppContent = () => {
 	const { homeRef, activeSection, scrollToSection } = useNavigation();
 
 	return (
-		<div className={`min-h-screen flex ${isDark ? 'bg-[#0c1843] text-white' : 'bg-[#69cdf7] text-[#0c1843]'}`}>
+		<div className={`min-h-screen flex ${isDark ? 'bg-[#071236] text-white' : 'bg-[#7eaed2] text-[#071236]'}`}>
 			<div>
 				<NavBar
 					activeSection={activeSection}

@@ -42,9 +42,9 @@ export const AppDrawer = ({ isOpen, toggleMenu, menuItems, isDark, onNavClick }:
 
 	return (
 		<div
-			className={`fixed w-[80%] top-0 left-0 h-screen z-50 transition-transform duration-700 ease-in-out bg-[#0c1843]
+			className={`fixed w-[80%] top-0 left-0 h-screen z-50 transition-transform duration-700 ease-in-out bg-[#071236]
 			${isOpen ? 'translate-x-0' : '-translate-x-full'}
-			${isDark ? 'bg-[#0c1843] text-white' : 'bg-white text-[#0c1843]'}`}>
+			${isDark ? 'bg-[#071236] text-white' : 'bg-white text-[#071236]'}`}>
 			<div className='flex flex-col items-center'>
 				<img
 					src='/profile.png'
@@ -55,23 +55,23 @@ export const AppDrawer = ({ isOpen, toggleMenu, menuItems, isDark, onNavClick }:
 				<div className='flex gap-2 mt-2'>
 					<FaReact
 						size={24}
-						className={isDark ? 'text-white' : 'text-[#0c1843]'}
+						className={isDark ? 'text-white' : 'text-[#071236]'}
 					/>
 					<SiTypescript
 						size={23}
-						className={isDark ? 'text-white' : 'text-[#0c1843]'}
+						className={isDark ? 'text-white' : 'text-[#071236]'}
 					/>
 					<FaNodeJs
 						size={24}
-						className={isDark ? 'text-white' : 'text-[#0c1843]'}
+						className={isDark ? 'text-white' : 'text-[#071236]'}
 					/>
 					<BiLogoPostgresql
 						size={26}
-						className={isDark ? 'text-white' : 'text-[#0c1843]'}
+						className={isDark ? 'text-white' : 'text-[#071236]'}
 					/>
 					<FaAws
 						size={27}
-						className={isDark ? 'text-white' : 'text-[#0c1843]'}
+						className={isDark ? 'text-white' : 'text-[#071236]'}
 					/>
 				</div>
 				<div>

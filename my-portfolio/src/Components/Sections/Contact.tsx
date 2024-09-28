@@ -18,13 +18,13 @@ export const Contact = () => {
 		}
 	}, [state.succeeded, reset]);
 
-	const inputStyle = `p-2 rounded-md lg:mx-10 ${isDark ? 'bg-white text-black' : 'bg-white text-[#0c1843] border border-[#0c1843]'}`;
+	const inputStyle = `p-2 rounded-md lg:mx-2 ${isDark ? 'bg-white text-black' : 'bg-white text-[#071236] border border-[#071236]'}`;
 
 	return (
 		<div className='flex flex-col'>
-			<h1 className='mb-2 mt-10 text-lg'>Contact</h1>
-			<div className={`${isDark ? 'border-gray-300' : 'border-[#0c1843]'} border-b mb-10`}></div>
-			<div className={`flex justify-center ${isDark ? 'bg-[#0c1843] text-white' : 'bg-[#69cdf7] text-[#0c1843]'}'}`}>
+			<h1 className='mb-1 mt-20 md:mt-28 text-2xl'>Contact</h1>
+			<div className={`${isDark ? 'border-gray-300' : 'border-[#071236]'} border-b mb-2`}></div>
+			<div className={`flex justify-center ${isDark ? 'bg-[#071236] text-white' : 'bg-[#7eaed2] text-[#071236]'}'}`}>
 				{showModal && (
 					<div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center'>
 						<div className='bg-white p-6 rounded shadow-lg'>
@@ -36,7 +36,7 @@ export const Contact = () => {
 					onSubmit={handleSubmit}
 					className='flex flex-col gap-2 my-10 w-5/6'>
 					<label
-						className='font-medium lg:ml-10'
+						className='font-medium lg:ml-2'
 						htmlFor='name'>
 						Name
 					</label>
@@ -53,7 +53,7 @@ export const Contact = () => {
 						errors={state.errors}
 					/>
 					<label
-						className='mt-2 font-medium lg:ml-10'
+						className='font-medium lg:ml-2'
 						htmlFor='email'>
 						Email Address
 					</label>
@@ -70,7 +70,7 @@ export const Contact = () => {
 						errors={state.errors}
 					/>
 					<label
-						className='font-medium mt-2 lg:ml-10'
+						className='font-medium lg:ml-2'
 						htmlFor='message'>
 						Message
 					</label>
@@ -90,7 +90,7 @@ export const Contact = () => {
 						<button
 							type='submit'
 							disabled={state.submitting}
-							className='mt-4 px-10 py-2 mx-20 lg:mx-40 bg-green-600 text-white font-medium rounded hover:bg-green-600 disabled:bg-gray-300'>
+							className='mt-4 px-10 py-2 mx-20 lg:mx-40 border border-gray-300 text-white font-medium rounded hover:bg-green-600 disabled:bg-gray-300'>
 							Submit
 						</button>
 					</div>
