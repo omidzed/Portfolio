@@ -22,7 +22,7 @@ export const About = ({ className = '' }: Props) => {
 					Omid Asadi
 				</span>
 				<span className='text-2xl lg:text-4xl mt-1 font-light tracking-wider lg:tracking-wider'>Full Stack Developer</span>
-				<span className='text-sm font-semibold lg:font-light lg:tracking-tight mt-1 lg:text-lg'>[ React | TypeScript | Node | PostgreSQL | AWS ]</span>
+				<span className='text-sm font-light tracking-tight mt-1 lg:text-lg'>[ React | TypeScript | Node | PostgreSQL | AWS ]</span>
 				{resume && (
 					<a
 						href={'../Resume.pdf'}
