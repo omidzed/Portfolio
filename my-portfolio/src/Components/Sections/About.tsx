@@ -1,4 +1,5 @@
 import { useDarkMode } from '../../Hooks/useDarkMode';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 type Props = {
 	className?: string;
@@ -32,6 +33,22 @@ export const About = ({ className = '' }: Props) => {
 						View Resume
 					</a>
 				)}
+			</div>
+			<div className=' md:hidden flex justify-center gap-4 mt-10'>
+				<a
+					className='hover:text-yellow-300 transition ease-in-out duration-300 hover:scale-105'
+					href='https://github.com/omidzed'
+					target='_blank'
+					rel='noopener noreferrer'>
+					<FaGithub size={40} />
+				</a>
+				<a
+					className='hover:text-yellow-300 transition ease-in-out duration-300 hover:scale-105'
+					href='https://www.linkedin.com/in/omidzasadi/'
+					target='_blank'
+					rel='noopener noreferrer'>
+					<FaLinkedin size={40} />
+				</a>
 			</div>
 			<div>
 				<div className='mb-2 mt-10 text-lg'>About</div>

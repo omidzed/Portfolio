@@ -1,7 +1,7 @@
 import { Menu } from './Menu';
 import { useEffect } from 'react';
 import { MenuItem } from '../../utils/data-types';
-import { FaArrowLeft, FaReact, FaAws, FaNodeJs } from 'react-icons/fa';
+import { FaArrowLeft, FaReact, FaAws, FaNodeJs, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiTypescript } from 'react-icons/si';
 import { BiLogoPostgresql } from 'react-icons/bi';
 
@@ -16,30 +16,29 @@ type AppDrawerProps = {
 export const AppDrawer = ({ isOpen, toggleMenu, menuItems, isDark, onNavClick }: AppDrawerProps) => {
 	//const navigate = useNavigate();
 
-useEffect(() => {
-	const handleKeyDown = (event: KeyboardEvent) => {
-		if (event.key === 'Escape') {
-			toggleMenu();
-		}
-	};
-	if (isOpen) {
-		document.addEventListener('keydown', handleKeyDown);
-		document.body.style.overflow = 'hidden';
-	} else {
-		document.removeEventListener('keydown', handleKeyDown);
-		document.body.style.overflow = 'auto'; // Make sure this sets back to 'auto' or the initial value appropriately once.
-	}
-	return () => {
-		document.removeEventListener('keydown', handleKeyDown);
-		document.body.style.overflow = 'auto'; // Ensure cleanup sets it back appropriately.
-	};
-}, [isOpen, toggleMenu]);
-
-
-		const handleSelect = (path: string) => {
-			onNavClick(path);
-			toggleMenu();
+	useEffect(() => {
+		const handleKeyDown = (event: KeyboardEvent) => {
+			if (event.key === 'Escape') {
+				toggleMenu();
+			}
 		};
+		if (isOpen) {
+			document.addEventListener('keydown', handleKeyDown);
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.removeEventListener('keydown', handleKeyDown);
+			document.body.style.overflow = 'auto'; // Make sure this sets back to 'auto' or the initial value appropriately once.
+		}
+		return () => {
+			document.removeEventListener('keydown', handleKeyDown);
+			document.body.style.overflow = 'auto'; // Ensure cleanup sets it back appropriately.
+		};
+	}, [isOpen, toggleMenu]);
+
+	const handleSelect = (path: string) => {
+		onNavClick(path);
+		toggleMenu();
+	};
 
 	return (
 		<div
@@ -78,7 +77,7 @@ useEffect(() => {
 				<div>
 					<div className={isOpen ? 'hidden' : 'hamburger-container'}></div>
 					<div className={isOpen ? 'menu-drawer open' : 'menu-drawer closed'}>
-						<div className='flex justify-center '>
+						<div className='flex flex-col justify-center '>
 							<div
 								className='fixed top-6 right-4 cursor-pointer'
 								onClick={() => toggleMenu()}>
@@ -87,13 +86,29 @@ useEffect(() => {
 									size={20}
 								/>
 							</div>
-							<div className='mt-14 flex flex-col justify-center items-center'>
+							<div className='mt-10 flex flex-col justify-center items-center'>
 								<Menu
 									toggleMenu={toggleMenu}
 									onSelect={handleSelect}
 									menuItems={menuItems}
 									isDark={isDark}
 								/>
+							</div>
+							<div className=' md:hidden flex justify-center gap-4 mt-10'>
+								<a
+									className='hover:text-yellow-300 transition ease-in-out duration-300 hover:scale-105'
+									href='https://github.com/omidzed'
+									target='_blank'
+									rel='noopener noreferrer'>
+									<FaGithub size={40} />
+								</a>
+								<a
+									className='hover:text-yellow-300 transition ease-in-out duration-300 hover:scale-105'
+									href='https://www.linkedin.com/in/omidzasadi/'
+									target='_blank'
+									rel='noopener noreferrer'>
+									<FaLinkedin size={40} />
+								</a>
 							</div>
 						</div>
 					</div>
