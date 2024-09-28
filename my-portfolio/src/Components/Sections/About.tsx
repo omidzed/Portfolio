@@ -1,4 +1,4 @@
-import { useDarkMode } from '../Hooks/useDarkMode';
+import { useDarkMode } from '../../Hooks/useDarkMode';
 
 type Props = {
 	className?: string;
@@ -25,7 +25,7 @@ export const About = ({ className = '' }: Props) => {
 			</div>
 			<div>
 				<h1 className='text-left mt-10'>About</h1>
-				<div className='border-b border-white mt-2'></div>
+				<div className='border-b border-gray-300 mt-2'></div>
 				<div className={`text-sm mt-4 text-justify md:text-xl lg:font-light ${className}`}>{details}</div>
 			</div>
 		</div>

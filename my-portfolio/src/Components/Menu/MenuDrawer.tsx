@@ -1,5 +1,4 @@
 import { Menu } from './Menu';
-//import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { MenuItem } from '../../utils/data-types';
 import { FaArrowLeft, FaReact, FaAws, FaNodeJs } from 'react-icons/fa';
@@ -103,39 +102,3 @@ useEffect(() => {
 		</div>
 	);
 };
-
-// 	return (
-// 		<div
-// 			className={`fixed w-[80%] top-0 left-0 h-screen z-50 transition-transform duration-700 ease-in-out bg-[#0c1843]
-//       ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-//       ${isDark ? 'bg-[#0c1843] text-white' : 'bg-white text-[#0c1843]'}`}>
-// 			{/* Rest of the component remains the same */}
-// 			<div className='flex flex-col items-center'>
-// 				{/* ... */}
-// 				<div>
-// 					<div className={isOpen ? 'hidden' : 'hamburger-container'}></div>
-// 					<div className={isOpen ? 'menu-drawer open' : 'menu-drawer closed'}>
-// 						<div className='flex justify-center '>
-// 							<div
-// 								className='fixed top-6 right-4 cursor-pointer'
-// 								onClick={toggleMenu}>
-// 								<FaArrowLeft
-// 									color={isDark ? 'white' : 'black'}
-// 									size={20}
-// 								/>
-// 							</div>
-// 							<div className='mt-14 flex flex-col justify-center items-center'>
-// 								<Menu
-// 									toggleMenu={toggleMenu}
-// 									onSelect={handleSelect}
-// 									menuItems={menuItems}
-// 									isDark={isDark}
-// 								/>
-// 							</div>
-// 						</div>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</div>
-// 	);
-// };

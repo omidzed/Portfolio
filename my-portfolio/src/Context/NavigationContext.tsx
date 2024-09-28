@@ -1,6 +1,5 @@
 import React, { createContext, useRef, RefObject, useState, useEffect } from 'react';
 
-
 export type NavigationContextValues = {
 	homeRef: RefObject<HTMLDivElement>;
 	aboutRef: RefObject<HTMLDivElement>;
@@ -38,7 +37,7 @@ export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ ch
 
 	useEffect(() => {
 		const handleScroll = () => {
-			const scrollPosition = window.scrollY;
+			//const scrollPosition = window.scrollY + window.innerHeight / 2;
 			const sections = [
 				{ name: 'home', ref: homeRef },
 				{ name: 'about', ref: aboutRef },
@@ -49,14 +48,18 @@ export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ ch
 
 			for (const section of sections) {
 				const element = section.ref.current;
-				if (element && scrollPosition >= element.offsetTop - 100 && scrollPosition < element.offsetTop + element.offsetHeight - 100) {
-					setActiveSection(section.name);
-					break;
+				if (element) {
+					const { top, bottom } = element.getBoundingClientRect();
+					if (top <= window.innerHeight / 2 && bottom >= window.innerHeight / 2) {
+						setActiveSection(section.name);
+						break;
+					}
 				}
 			}
 		};
 
 		window.addEventListener('scroll', handleScroll);
+		handleScroll();
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 

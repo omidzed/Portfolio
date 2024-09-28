@@ -15,7 +15,10 @@ export const Menu = ({ onSelect, toggleMenu, menuItems, isDark }: MenuProps) => 
 			border  px-12  py-1 rounded-3xl text-center transition-colors duration-300
         ${isDark ? 'bg-[#0c1843] text-white border-[#E9E000]' : 'bg-[#0c1843] text-white border-[#0c1843]'}
       `}
-			onClick={() => onSelect(menuItem.path)}>
+			onClick={() => {
+				onSelect(menuItem.path);
+				toggleMenu();
+			}}>
 			<div>
 				<span>{menuItem.title}</span>
 			</div>

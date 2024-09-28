@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import { Spin as Hamburger } from 'hamburger-react';
-import { AppDrawer } from './Menu/MenuDrawer';
-import { Overlay } from './Menu/Overlay';
-import { MenuItem } from '../utils/data-types';
+import { AppDrawer } from '../Menu/MenuDrawer';
+import { Overlay } from '../Menu/Overlay';
+import { MenuItem } from '../../utils/data-types';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import { useDarkMode } from '../Hooks/useDarkMode';
+import { useDarkMode } from '../../Hooks/useDarkMode';
 
 type NavBarProps = {
 	activeSection: string;
 	onNavClick: (section: string) => void;
 };
 
-export const NavBar = ({  onNavClick }: NavBarProps) => {
+export const NavBar = ({ onNavClick }: NavBarProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const { isDark, toggleDarkMode } = useDarkMode();
 
