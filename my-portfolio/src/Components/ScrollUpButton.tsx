@@ -21,8 +21,8 @@ export const ScrollUpButton = () => {
 			{isVisible && (
 				<div
 					onClick={handleClick}
-					className='fixed right-5 bottom-15 opacity-70 hover:opacity-100 md:right-10 md:bottom-8 lg:right-30 cursor-pointer hover:scale-125 transition-transform'>
-					<FaCircleChevronUp className={`text-4xl ${isActive ? ' opacity-100 rounded-full hover:text-gray-600 hover:bg-yellow-300 hover:scale-105 ' : 'opacity-100'}`} />
+					className='fixed right-5 bottom-15 opacity-70 hover:opacity-100 md:right-20 md:bottom-8 lg:right-30 cursor-pointer hover:scale-125 transition-transform'>
+					<FaCircleChevronUp className={`text-4xl ${isActive ? ' opacity-100 rounded-full hover:text-blue-300  hover:scale-105 ' : 'opacity-100'}`} />
 				</div>
 			)}
 		</>

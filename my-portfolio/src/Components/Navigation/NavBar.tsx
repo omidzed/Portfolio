@@ -52,14 +52,16 @@ export const NavBar = ({ onNavClick }: NavBarProps) => {
 					/>
 				</div>
 			)}
-			<DarkModeSwitch
-				className='mr-4 mt-4'
-				checked={!isDark}
-				onChange={toggleDarkMode}
-				size={25}
-				moonColor='#071236'
-				sunColor='yellow'
-			/>
+			<div className="hover:scale-110 transition ease-in-out">
+				<DarkModeSwitch
+					className='mr-4 mt-4'
+					checked={!isDark}
+					onChange={toggleDarkMode}
+					size={25}
+					moonColor='#071236'
+					sunColor='yellow'
+				/>
+			</div>
 		</div>
 	);
 };

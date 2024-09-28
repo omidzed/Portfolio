@@ -44,33 +44,33 @@ export const AppDrawer = ({ isOpen, toggleMenu, menuItems, isDark, onNavClick }:
 		<div
 			className={`fixed w-[80%] top-0 left-0 h-screen z-50 transition-transform duration-700 ease-in-out bg-[#071236]
 			${isOpen ? 'translate-x-0' : '-translate-x-full'}
-			${isDark ? 'bg-[#071236] text-white' : 'bg-white text-[#071236]'}`}>
+			${isDark ? 'bg-[#071236] text-white' : 'bg-[#7eaed2] text-[#071236]'}`}>
 			<div className='flex flex-col items-center'>
 				<img
 					src='/profile.png'
 					alt='profile photo'
 					className='w-[48%] mt-10 mb-3'></img>
-				<span className='text-3xl tracking-wide'>Omid Asadi</span>
-				<span className='text-lg'>Full Stack Developer</span>
-				<div className='flex gap-2 mt-2'>
+				<span className='text-4xl tracking-wider'>Omid Asadi</span>
+				<span className='text-lg tracking-widest font-extralight'>Full Stack Developer</span>
+				<div className='flex gap-2.5 mt-2'>
 					<FaReact
-						size={24}
-						className={isDark ? 'text-white' : 'text-[#071236]'}
-					/>
-					<SiTypescript
-						size={23}
-						className={isDark ? 'text-white' : 'text-[#071236]'}
-					/>
-					<FaNodeJs
-						size={24}
-						className={isDark ? 'text-white' : 'text-[#071236]'}
-					/>
-					<BiLogoPostgresql
 						size={26}
 						className={isDark ? 'text-white' : 'text-[#071236]'}
 					/>
+					<SiTypescript
+						size={25}
+						className={isDark ? 'text-white' : 'text-[#071236]'}
+					/>
+					<FaNodeJs
+						size={26}
+						className={isDark ? 'text-white' : 'text-[#071236]'}
+					/>
+					<BiLogoPostgresql
+						size={28}
+						className={isDark ? 'text-white' : 'text-[#071236]'}
+					/>
 					<FaAws
-						size={27}
+						size={29}
 						className={isDark ? 'text-white' : 'text-[#071236]'}
 					/>
 				</div>
@@ -94,20 +94,20 @@ export const AppDrawer = ({ isOpen, toggleMenu, menuItems, isDark, onNavClick }:
 									isDark={isDark}
 								/>
 							</div>
-							<div className=' md:hidden flex justify-center gap-4 mt-7'>
+							<div className=' md:hidden flex justify-center gap-8 mt-7'>
 								<a
 									className='hover:text-yellow-300 transition ease-in-out duration-300 hover:scale-105'
 									href='https://github.com/omidzed'
 									target='_blank'
 									rel='noopener noreferrer'>
-									<FaGithub size={40} />
+									<FaGithub size={42} />
 								</a>
 								<a
 									className='hover:text-yellow-300 transition ease-in-out duration-300 hover:scale-105'
 									href='https://www.linkedin.com/in/omidzasadi/'
 									target='_blank'
 									rel='noopener noreferrer'>
-									<FaLinkedin size={40} />
+									<FaLinkedin size={42} />
 								</a>
 							</div>
 						</div>

@@ -14,18 +14,17 @@ export const About = ({ className = '' }: Props) => {
 		<div className={`${isDark ? 'bg-[#071236] text-white' : 'bg-[#7eaed2] text-[#071236]'}`}>
 			<div className='flex flex-col items-center mt-5'>
 				<span
-					id='omid'
-					className='text-5xl lg:text-6xl tracking-wide lg:tracking-widest'>
+					className='text-6xl lg:text-7xl font-semibold lg:tracking-wider'>
 					Omid Asadi
 				</span>
-				<span className='text-2xl lg:text-4xl mt-1 font-light tracking-wider lg:tracking-wider'>Full Stack Developer</span>
-				<span className='text-sm font-light tracking-tight mt-1 lg:text-lg'>[ React | TypeScript | Node | PostgreSQL | AWS ]</span>
+				<span className='text-4xl lg:text-4xl mt-1 font-extralight tracking-tight lg:tracking-widest'>Full Stack Developer</span>
+				<span className='text-sm font-light mt-1 lg:text-lg lg:tracking-wide'>[ React | TypeScript | Node | PostgreSQL | AWS ]</span>
 				{resume && (
 					<a
 						href={'../Resume.pdf'}
 						target='_blank'
 						rel='noopener noreferrer'
-						className={`${isDark ? 'bg-[#071236] text-white' : 'bg-[#071236] text-white'} mt-8 px-10 py-2 border border-gray-400 hover:scale-105 transition ease-out duration-300 hover:bg-blue-600 hover:border-blue-700 text-white font-semibold rounded-lg`}>
+						className={`${isDark ? 'bg-[#071236] text-white' : 'bg-[#071236] text-white'} text-lg mt-8 px-10 py-2 border border-gray-400 hover:scale-105 transition ease-out duration-300 hover:bg-blue-600 hover:border-blue-700 text-white font-semibold rounded-lg tracking-widest`}>
 						View Resume
 					</a>
 				)}
@@ -47,9 +46,9 @@ export const About = ({ className = '' }: Props) => {
 				</a>
 			</div>
 			<div>
-				<div className='mb-1 mt-14 md:mt-20 text-2xl'>About</div>
+				<div className='mb-1 mt-20 md:mt-28 text-2xl'>About</div>
 				<div className={`${isDark ? 'border-gray-300' : 'border-[#071236]'} border-b mb-2`}></div>
-				<div className={`text-sm mt-6 text-justify md:text-xl lg:font-light ${className}`}>
+				<div className={`text-sm mt-6 mx-10 text-justify md:text-xl lg:font-extralight ${className}`}>
 					I am a Full Stack developer specializing in <strong className='font-bold'>React, TypeScript, Node.js, PostgreSQL</strong>, and <strong className='font-bold'>AWS</strong>.
 					My current interests include <strong className='font-bold'>Next.js</strong> and <strong className="font-bold">Python</strong>. I have about 2 years of experience in the industry and I have built applications
 					related to sports betting, cryptocurrency, and a productivity journal software.

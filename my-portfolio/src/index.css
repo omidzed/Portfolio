@@ -6,11 +6,12 @@ body {
 	transition:
 		background-color 0.3s,
 		color 0.3s;
+		font-family: 'roboto condensed', sans-serif;
 }
 
 #omid {
-	font-family: 'Edu AU VIC WA NT Dots', cursive;
+	font-family: 'roboto condensed', sans-serif;
 	font-optical-sizing: auto;
-	font-weight: 400;
+	font-weight: 500;
 	font-style: normal;
 }

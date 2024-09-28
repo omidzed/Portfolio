@@ -90,7 +90,7 @@ export const Contact = () => {
 						<button
 							type='submit'
 							disabled={state.submitting}
-							className='mt-4 px-10 py-2 mx-20 lg:mx-40 border border-gray-300 text-white font-medium rounded hover:bg-green-600 disabled:bg-gray-300'>
+							className={`mt-4 px-10 py-2 mx-20 lg:mx-40 border ${isDark ? 'border-gray-300' : 'bg-[#071236]'}  text-white font-medium rounded hover:bg-blue-600 disabled:bg-gray-300`}>
 							Submit
 						</button>
 					</div>

@@ -20,13 +20,13 @@ export const Projects = () => {
 						className='inline-block align-text-bottom'
 						size={15}
 					/>
-					<span className='text-xl italic font-bold mb-1'>Let's Parlay</span>
+					<span className='text-2xl italic font-bold mb-1 tracking-wider'>Let's Parlay</span>
 				</div>
-				<span className='text-sm tracking-tighter md:text-lg md:tracking-wide'>[ React | TypeScript | Node | Express | PostgreSQL | AWS ]</span>
+				<span className='text-sm tracking-tighter md:text-lg md:tracking-wide font-medium'>[ React | TypeScript | Node | Express | PostgreSQL | AWS ]</span>
 			</a>
 
 			<LetsParlayCarousel />
-			<p className='font-extralight text-justify tracking-tight md:text-lg mb-4 mx-2'>
+			<p className='font-extralight text-justify  md:text-lg mb-2 mx-10'>
 				A Full Stack <strong className='font-bold'>React, TypeScript, Node.JS, Express.JS</strong>, and <strong className='font-bold'>PostgreSQL </strong> project, deployed on{' '}
 				<strong className='font-bold'>AWS EC2</strong>, "Let's Parlay" is a virtual sportsbook web application, that allows MMA fans to try online betting for fun, with zero
 				financial risk!
@@ -42,12 +42,12 @@ export const Projects = () => {
 						className='inline-block align-text-bottom'
 						size={15}
 					/>
-					<span className='text-xl italic font-bold mb-1'>Defi-City</span>
+					<span className='text-2xl italic font-bold mb-1 tracking-wider'>Defi-City</span>
 				</div>
-				<span className='text-sm tracking-tighter md:text-lg md:tracking-wide'>[ React | TypeScript | Tailwind CSS | Vite | Vercel ]</span>
+				<span className='text-sm tracking-tight md:text-lg md:tracking-wide font-medium'>[ React | TypeScript | Tailwind CSS | Vite | Vercel ]</span>
 			</a>
 			<DefiCityCarousel />
-			<p className='font-extralight tracking-tight text-justify md:text-lg mx-2 mb-10'>
+			<p className='font-extralight text-justify md:text-lg mx-10 mb-10'>
 				A <strong className='font-bold'>React, TypeScript</strong> crypto tracker app optimized by the {}
 				<strong className='font-bold'>React Context API</strong>. It uses <strong className='font-bold'>Tailwind CSS</strong> for styling, and features watchlists and 7-day
 				performance charts powered by the {}

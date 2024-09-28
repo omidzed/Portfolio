@@ -30,27 +30,27 @@ export const SideBar = ({ className = '' }: Props) => {
 				src='/profile.png'
 				alt='profile-image'
 			/>
-			<span className='font-semibold text-2xl lg:text-4xl whitespace-nowrap'>Omid Asadi</span>
-			<span className='whitespace-nowrap text-sm lg:text-xl text-center tracking-wide'>Full Stack Developer</span>
-			<div className='flex gap-4 mt-2'>
+			<span className='font-semibold text-2xl lg:text-4xl whitespace-nowrap tracking-wider'>Omid Asadi</span>
+			<span className='whitespace-nowrap text-sm lg:text-xl text-center tracking-wider font-light'>Full Stack Developer</span>
+			<div className='flex gap-3 mt-2'>
 				<FaReact
-					size={24}
+					size={25}
 					className={isDark ? 'text-white' : 'text-[#071236]'}
 				/>
 				<SiTypescript
-					size={23}
-					className={isDark ? 'text-white' : 'text-[#071236]'}
-				/>
-				<FaNodeJs
 					size={24}
 					className={isDark ? 'text-white' : 'text-[#071236]'}
 				/>
-				<BiLogoPostgresql
+				<FaNodeJs
 					size={26}
 					className={isDark ? 'text-white' : 'text-[#071236]'}
 				/>
-				<FaAws
+				<BiLogoPostgresql
 					size={27}
+					className={isDark ? 'text-white' : 'text-[#071236]'}
+				/>
+				<FaAws
+					size={28}
 					className={isDark ? 'text-white' : 'text-[#071236]'}
 				/>
 			</div>
@@ -67,16 +67,16 @@ export const SideBar = ({ className = '' }: Props) => {
 					</button>
 				))}
 			</nav>
-			<div className='flex gap-4 mt-10'>
+			<div className='flex gap-8 mt-10'>
 				<a
-					className='hover:text-yellow-300 transition ease-in-out duration-300 hover:scale-105'
+					className='hover:text-yellow-300 transition ease-in-out duration-300 hover:scale-125'
 					href='https://github.com/omidzed'
 					target='_blank'
 					rel='noopener noreferrer'>
 					<FaGithub size={40} />
 				</a>
 				<a
-					className='hover:text-yellow-300 transition ease-in-out duration-300 hover:scale-105'
+					className='hover:text-yellow-300 transition ease-in-out duration-300 hover:scale-125'
 					href='https://www.linkedin.com/in/omidzasadi/'
 					target='_blank'
 					rel='noopener noreferrer'>
