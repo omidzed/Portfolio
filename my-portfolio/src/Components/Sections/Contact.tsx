@@ -22,9 +22,9 @@ export const Contact = () => {
 
 	return (
 		<div className='flex flex-col'>
-			<h1 className='text-left mt-10'>Contact</h1>
-			<div className='border-b border-gray-300 mt-2'></div>
-			<div className={`flex justify-center ${isDark ? 'bg-[#0c1843] text-white' : 'bg-white text-[#0c1843]'}`}>
+			<h1 className='mb-2 mt-10 text-lg'>Contact</h1>
+			<div className={`${isDark ? 'border-gray-300' : 'border-[#0c1843]'} border-b mb-10`}></div>
+			<div className={`flex justify-center ${isDark ? 'bg-[#0c1843] text-white' : 'bg-[#69cdf7] text-[#0c1843]'}'}`}>
 				{showModal && (
 					<div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center'>
 						<div className='bg-white p-6 rounded shadow-lg'>
@@ -86,7 +86,7 @@ export const Contact = () => {
 						field='message'
 						errors={state.errors}
 					/>
-					<div className="flex justify-center">
+					<div className='flex justify-center'>
 						<button
 							type='submit'
 							disabled={state.submitting}

@@ -1,4 +1,4 @@
-import { NavBar } from "./Components/Navigation/NavBar";
+import { NavBar } from './Components/Navigation/NavBar';
 import { HomePage } from './Components/Sections/HomePage';
 import { DarkModeProvider } from './Context/DarkModeContext';
 import { useDarkMode } from './Hooks/useDarkMode';
@@ -10,7 +10,7 @@ const AppContent = () => {
 	const { homeRef, activeSection, scrollToSection } = useNavigation();
 
 	return (
-		<div className={`min-h-screen flex ${isDark ? 'bg-[#0c1843] text-white' : 'bg-white text-[#0c1843]'}`}>
+		<div className={`min-h-screen flex ${isDark ? 'bg-[#0c1843] text-white' : 'bg-[#69cdf7] text-[#0c1843]'}`}>
 			<div>
 				<NavBar
 					activeSection={activeSection}

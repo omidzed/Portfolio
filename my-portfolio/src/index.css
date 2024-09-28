@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-	background-color: white;
+	background-color: rgb(79, 204, 253);
 	color: #0c1843;
 	transition:
 		background-color 0.3s,

@@ -11,7 +11,7 @@ type TopicCardProps = {
 export const TopicCard: React.FC<TopicCardProps> = ({ topic, onClick, isOpen }) => {
 	return (
 		<div
-			className='cursor-pointer flex gap-2 items-center'
+			className='cursor-pointer flex gap-6 items-center'
 			onClick={onClick}>
 			<img
 				src={topic.content}

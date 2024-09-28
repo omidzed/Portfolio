@@ -7,5 +7,5 @@ export type Topic = {
 	id: number;
 	title: string;
 	content: string;
-	category: string;
+	category: string[];
 };

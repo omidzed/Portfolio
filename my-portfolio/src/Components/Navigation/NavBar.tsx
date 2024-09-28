@@ -26,7 +26,7 @@ export const NavBar = ({ onNavClick }: NavBarProps) => {
 	];
 
 	return (
-		<div className={`flex justify-between lg:justify-end items-center p-5 lg:pr-10 lg:pt-10 ${isDark ? 'bg-[#0c1843] text-white' : 'bg-white text-[#0c1843]'}`}>
+		<div className={`flex justify-between lg:justify-end items-center p-5 lg:pr-10 lg:pt-10 ${isDark ? 'bg-[#0c1843] text-white' : 'bg-[#69cdf7] text-[#0c1843]'}`}>
 			{isOpen && (
 				<Overlay
 					onClick={toggleMenu}

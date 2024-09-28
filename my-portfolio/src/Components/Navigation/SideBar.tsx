@@ -24,7 +24,7 @@ export const SideBar = ({ className = '' }: Props) => {
 	return (
 		<div
 			className={`fixed left-40 top-10 flex flex-col items-center ${className}
-      ${isDark ? 'bg-[#0c1843] text-white' : 'bg-white text-[#0c1843]'}`}>
+     ${isDark ? 'bg-[#0c1843] text-white' : 'bg-[#69cdf7] text-[#0c1843]'}`}>
 			<img
 				className='w-44 m-8'
 				src='/profile.png'
@@ -60,7 +60,7 @@ export const SideBar = ({ className = '' }: Props) => {
 						key={menuItem.title}
 						onClick={() => scrollToSection(menuItem.path)}
 						className={`border px-12 py-1 rounded-3xl text-center  transition ease-in-out duration-100 hover:bg-blue-600 hover:border-blue-600 hover:scale-105
-              ${isDark ? 'bg-[#0c1843] text-white border-[#e1de8e]' : 'bg-[#0c1843] text-white border-[#0c1843]'}`}>
+              ${isDark ? 'bg-[#0c1843] text-white border-gray-500' : 'bg-[#0c1843] text-white border-[#0c1843]'}`}>
 						<div>
 							<span>{menuItem.title}</span>
 						</div>

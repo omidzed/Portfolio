@@ -14,7 +14,7 @@ export const About = ({ className = '' }: Props) => {
 	const resume = '../Resume.pdf';
 
 	return (
-		<div className={`${isDark ? 'text-white' : 'bg-white text-[#0c1843]'}`}>
+		<div className={`${isDark ? 'bg-[#0c1843] text-white' : 'bg-[#69cdf7] text-[#0c1843]'}`}>
 			<div className='flex flex-col items-center mt-5'>
 				<span
 					id='omid'
@@ -28,14 +28,14 @@ export const About = ({ className = '' }: Props) => {
 						href={'../Resume.pdf'}
 						target='_blank'
 						rel='noopener noreferrer'
-						className='mt-8 px-10 py-2 border border-gray-500 transition ease-out duration-300 hover:bg-blue-600 hover:border-blue-700 text-white font-semibold rounded-lg'>
+						className={`${isDark ? 'bg-[#0c1843] text-white' : 'bg-[#0c1843] text-[#0c1843]'} mt-8 px-10 py-2 border border-gray-500 hover:scale-105 transition ease-out duration-300 hover:bg-blue-600 hover:border-blue-700 text-white font-semibold rounded-lg`}>
 						View Resume
 					</a>
 				)}
 			</div>
 			<div>
-				<h1 className='text-left mt-10'>About</h1>
-				<div className='border-b border-gray-300 mt-2'></div>
+				<div className='mb-2 mt-10 text-lg'>About</div>
+				<div className={`${isDark ? 'border-gray-300' : 'border-[#0c1843]'} border-b mb-10`}></div>
 				<div className={`text-sm mt-4 text-justify md:text-xl lg:font-light ${className}`}>{details}</div>
 			</div>
 		</div>
