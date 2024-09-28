@@ -7,7 +7,7 @@
 A React, TypeScript, Tailwind CSS project, deployed on Vercel. 
 
 
-![Let's Parlay Screenshot](Screenshot.png)
+![Portfolio Screenshot](portfolio.png)
 
 
 
