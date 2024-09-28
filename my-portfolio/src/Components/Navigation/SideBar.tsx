@@ -11,7 +11,7 @@ type Props = {
 
 export const SideBar = ({ className = '' }: Props) => {
 	const { isDark } = useDarkMode();
-	const { activeSection, scrollToSection } = useNavigation();
+	const { scrollToSection } = useNavigation();
 
 	const menuItems: MenuItem[] = [
 		{ title: 'Home', path: 'home' },
@@ -32,26 +32,26 @@ export const SideBar = ({ className = '' }: Props) => {
 			/>
 			<span className='font-semibold text-2xl lg:text-4xl whitespace-nowrap'>Omid Asadi</span>
 			<span className='whitespace-nowrap text-sm lg:text-xl text-center tracking-wide'>Full Stack Developer</span>
-			<div className='flex gap-2 mt-2'>
+			<div className='flex gap-4 mt-2'>
 				<FaReact
 					size={24}
-					className={isDark ? 'text-white' : 'text-blue-600'}
+					className={isDark ? 'text-white' : 'text-[#0c1843]'}
 				/>
 				<SiTypescript
 					size={23}
-					className={isDark ? 'text-white' : 'text-blue-600'}
+					className={isDark ? 'text-white' : 'text-[#0c1843]'}
 				/>
 				<FaNodeJs
 					size={24}
-					className={isDark ? 'text-white' : 'text-blue-600'}
+					className={isDark ? 'text-white' : 'text-[#0c1843]'}
 				/>
 				<BiLogoPostgresql
 					size={26}
-					className={isDark ? 'text-white' : 'text-blue-600'}
+					className={isDark ? 'text-white' : 'text-[#0c1843]'}
 				/>
 				<FaAws
 					size={27}
-					className={isDark ? 'text-white' : 'text-blue-600'}
+					className={isDark ? 'text-white' : 'text-[#0c1843]'}
 				/>
 			</div>
 			<nav className='hidden lg:flex lg:flex-col lg:text-center gap-3 mt-10'>
@@ -59,9 +59,8 @@ export const SideBar = ({ className = '' }: Props) => {
 					<button
 						key={menuItem.title}
 						onClick={() => scrollToSection(menuItem.path)}
-						className={`border px-12 py-1 rounded-3xl text-center transition-colors duration-300 hover:bg-blue-700
-              ${isDark ? 'bg-[#0c1843] text-white border-[#E9E000]' : 'bg-[#0c1843] text-white border-[#0c1843]'}
-              && ${activeSection === menuItem.path ? 'bg-blue-700' : ''}`}>
+						className={`border px-12 py-1 rounded-3xl text-center  transition ease-in-out duration-100 hover:bg-blue-600 hover:border-blue-600 hover:scale-105
+              ${isDark ? 'bg-[#0c1843] text-white border-[#e1de8e]' : 'bg-[#0c1843] text-white border-[#0c1843]'}`}>
 						<div>
 							<span>{menuItem.title}</span>
 						</div>
@@ -69,8 +68,20 @@ export const SideBar = ({ className = '' }: Props) => {
 				))}
 			</nav>
 			<div className='flex gap-4 mt-10'>
-				<FaGithub size={40} />
-				<FaLinkedin size={40} />
+				<a
+					className='hover:text-yellow-300 transition ease-in-out duration-300 hover:scale-105'
+					href='https://github.com/omidzed'
+					target='_blank'
+					rel='noopener noreferrer'>
+					<FaGithub size={40} />
+				</a>
+				<a
+					className='hover:text-yellow-300 transition ease-in-out duration-300 hover:scale-105'
+					href='https://www.linkedin.com/in/omidzasadi/'
+					target='_blank'
+					rel='noopener noreferrer'>
+					<FaLinkedin size={40} />
+				</a>
 			</div>
 		</div>
 	);

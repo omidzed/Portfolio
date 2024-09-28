@@ -86,12 +86,14 @@ export const Contact = () => {
 						field='message'
 						errors={state.errors}
 					/>
-					<button
-						type='submit'
-						disabled={state.submitting}
-						className='mt-4 px-4 py-2 mx-20 lg:mx-40  bg-green-600 text-white font-medium rounded hover:bg-green-600 disabled:bg-gray-300'>
-						Submit
-					</button>
+					<div className="flex justify-center">
+						<button
+							type='submit'
+							disabled={state.submitting}
+							className='mt-4 px-10 py-2 mx-20 lg:mx-40 bg-green-600 text-white font-medium rounded hover:bg-green-600 disabled:bg-gray-300'>
+							Submit
+						</button>
+					</div>
 				</form>
 			</div>
 		</div>

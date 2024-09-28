@@ -56,23 +56,23 @@ useEffect(() => {
 				<div className='flex gap-2 mt-2'>
 					<FaReact
 						size={24}
-						className={isDark ? 'text-white' : 'text-blue-600'}
+						className={isDark ? 'text-white' : 'text-[#0c1843]'}
 					/>
 					<SiTypescript
 						size={23}
-						className={isDark ? 'text-white' : 'text-blue-600'}
+						className={isDark ? 'text-white' : 'text-[#0c1843]'}
 					/>
 					<FaNodeJs
 						size={24}
-						className={isDark ? 'text-white' : 'text-blue-600'}
+						className={isDark ? 'text-white' : 'text-[#0c1843]'}
 					/>
 					<BiLogoPostgresql
 						size={26}
-						className={isDark ? 'text-white' : 'text-blue-600'}
+						className={isDark ? 'text-white' : 'text-[#0c1843]'}
 					/>
 					<FaAws
 						size={27}
-						className={isDark ? 'text-white' : 'text-blue-600'}
+						className={isDark ? 'text-white' : 'text-[#0c1843]'}
 					/>
 				</div>
 				<div>
