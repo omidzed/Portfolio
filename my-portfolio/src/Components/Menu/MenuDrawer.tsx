@@ -83,10 +83,10 @@ export const AppDrawer = ({ isOpen, toggleMenu, menuItems, isDark, onNavClick }:
 								onClick={() => toggleMenu()}>
 								<FaArrowLeft
 									color={isDark ? 'white' : 'black'}
-									size={20}
+									size={17}
 								/>
 							</div>
-							<div className='mt-10 flex flex-col justify-center items-center'>
+							<div className='mt-7 flex flex-col justify-center items-center'>
 								<Menu
 									toggleMenu={toggleMenu}
 									onSelect={handleSelect}
@@ -94,7 +94,7 @@ export const AppDrawer = ({ isOpen, toggleMenu, menuItems, isDark, onNavClick }:
 									isDark={isDark}
 								/>
 							</div>
-							<div className=' md:hidden flex justify-center gap-4 mt-10'>
+							<div className=' md:hidden flex justify-center gap-4 mt-7'>
 								<a
 									className='hover:text-yellow-300 transition ease-in-out duration-300 hover:scale-105'
 									href='https://github.com/omidzed'
