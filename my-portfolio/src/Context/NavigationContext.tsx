@@ -1,5 +1,6 @@
 import React, { createContext, useRef, RefObject, useState, useEffect } from 'react';
-import { throttle } from 'lodash';
+import throttle from 'lodash/throttle';
+
 
 export type NavigationContextValues = {
 	homeRef: RefObject<HTMLDivElement>;
@@ -38,7 +39,6 @@ export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ ch
 
 	useEffect(() => {
 		const handleScroll = throttle(() => {
-			//const scrollPosition = window.scrollY + window.innerHeight / 2;
 			const sections = [
 				{ name: 'home', ref: homeRef },
 				{ name: 'about', ref: aboutRef },
