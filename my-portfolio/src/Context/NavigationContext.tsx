@@ -37,7 +37,7 @@ export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ ch
 	};
 
 	useEffect(() => {
-		const handleScroll = throttle(() => {
+		const handleScroll = throttle(100, () => {
 			const sections = [
 				{ name: 'home', ref: homeRef },
 				{ name: 'about', ref: aboutRef },
@@ -56,7 +56,7 @@ export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ ch
 					}
 				}
 			}
-		}, 100);
+		});
 
 		window.addEventListener('scroll', handleScroll);
 		handleScroll();
