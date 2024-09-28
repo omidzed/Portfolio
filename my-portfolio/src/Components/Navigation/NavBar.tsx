@@ -54,7 +54,7 @@ export const NavBar = ({ onNavClick }: NavBarProps) => {
 			)}
 			<div className="hover:scale-110 transition ease-in-out">
 				<DarkModeSwitch
-					className='mr-4 mt-4'
+					className='mr-4'
 					checked={!isDark}
 					onChange={toggleDarkMode}
 					size={25}
