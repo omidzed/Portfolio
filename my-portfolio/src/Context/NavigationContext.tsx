@@ -1,6 +1,5 @@
 import React, { createContext, useRef, RefObject, useState, useEffect } from 'react';
-import throttle from 'lodash/throttle';
-
+import { throttle } from 'throttle-debounce';
 
 export type NavigationContextValues = {
 	homeRef: RefObject<HTMLDivElement>;
