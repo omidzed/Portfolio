@@ -9,11 +9,8 @@ export default defineConfig({
 	},
 	build: {
 		rollupOptions: {
-			external: source => {
-				if (source === 'lodash/throttle') {
-					return true; // Do not treat lodash/throttle as external
-				}
-			},
+			// Ensuring lodash isn't treated as an external dependency
+			external: [],
 		},
 	},
 });
