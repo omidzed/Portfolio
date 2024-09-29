@@ -55,23 +55,23 @@ export const AppDrawer = ({ isOpen, toggleMenu, menuItems, isDark, onNavClick }:
 				<div className='flex gap-2.5 mt-2'>
 					<FaReact
 						size={26}
-						className={isDark ? 'text-white' : 'text-[#071236]'}
+						className={isDark ? 'text-blue-300' : 'text-[#071236]'}
 					/>
 					<SiTypescript
 						size={25}
-						className={isDark ? 'text-white' : 'text-[#071236]'}
+						className={isDark ? 'text-blue-600' : 'text-[#071236]'}
 					/>
 					<FaNodeJs
 						size={26}
-						className={isDark ? 'text-white' : 'text-[#071236]'}
+						className={isDark ? 'text-green-500' : 'text-[#071236]'}
 					/>
 					<BiLogoPostgresql
 						size={28}
-						className={isDark ? 'text-white' : 'text-[#071236]'}
+						className={isDark ? 'text-blue-200' : 'text-[#071236]'}
 					/>
 					<FaAws
 						size={29}
-						className={isDark ? 'text-white' : 'text-[#071236]'}
+						className={isDark ? 'text-yellow-400' : 'text-[#071236]'}
 					/>
 				</div>
 				<div>

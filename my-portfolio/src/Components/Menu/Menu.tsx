@@ -13,7 +13,7 @@ export const Menu = ({ onSelect, toggleMenu, menuItems, isDark }: MenuProps) => 
 			key={menuItem.title}
 			className={`
 			border  px-16  py-1 rounded-3xl text-center transition-colors duration-300
-        ${isDark ? 'bg-[#071236] text-white border-[#ebe770]' : 'bg-[#071236] text-white border-[#071236]'}
+        ${isDark ? 'bg-[#071236] text-white border-gray-300' : 'bg-[#071236] text-white border-[#071236]'}
       `}
 			onClick={() => {
 				onSelect(menuItem.path);
