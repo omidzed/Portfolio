@@ -35,23 +35,23 @@ export const SideBar = ({ className = '' }: Props) => {
 			<div className='flex gap-3 mt-2'>
 				<FaReact
 					size={25}
-					className={isDark ? 'text-white' : 'text-[#071236]'}
+					className={isDark ? 'text-blue-300' : 'text-[#071236]'}
 				/>
 				<SiTypescript
 					size={24}
-					className={isDark ? 'text-white' : 'text-[#071236]'}
+					className={isDark ? 'text-blue-600' : 'text-[#071236]'}
 				/>
 				<FaNodeJs
 					size={26}
-					className={isDark ? 'text-white' : 'text-[#071236]'}
+					className={isDark ? 'text-green-500' : 'text-[#071236]'}
 				/>
 				<BiLogoPostgresql
 					size={27}
-					className={isDark ? 'text-white' : 'text-[#071236]'}
+					className={isDark ? 'text-blue-200' : 'text-[#071236]'}
 				/>
 				<FaAws
 					size={28}
-					className={isDark ? 'text-white' : 'text-[#071236]'}
+					className={isDark ? 'text-yellow-400' : 'text-[#071236]'}
 				/>
 			</div>
 			<nav className='hidden lg:flex lg:flex-col lg:text-center gap-3 mt-10 font-semibold'>
