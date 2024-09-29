@@ -1,9 +1,9 @@
 import { NavBar } from './Components/Navigation/NavBar';
 import { HomePage } from './Components/Sections/HomePage';
-import { DarkModeProvider } from './Context/DarkModeContext';
+import { DarkModeProvider } from './Context/DarkModeProvider';
 import { useDarkMode } from './Hooks/useDarkMode';
 import { useNavigation } from './Hooks/useNavigation';
-import { NavigationProvider } from './Context/NavigationContext';
+import { NavigationProvider } from './Context/NavigationProvider';
 
 const AppContent = () => {
 	const { isDark } = useDarkMode();
