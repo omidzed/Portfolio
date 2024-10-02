@@ -5,18 +5,29 @@ import { useDarkMode } from '../../Hooks/useDarkMode';
 export const Contact = () => {
 	const [state, handleSubmit, reset] = useForm('xnnakdde');
 	const [showModal, setShowModal] = useState(false);
+    const [formData, setFormData] = useState({
+			name: '',
+			email: '',
+			message: '',
+		});
 
 	const { isDark } = useDarkMode();
 
-	useEffect(() => {
+  useEffect(() => {
 		if (state.succeeded) {
 			setShowModal(true);
 			setTimeout(() => {
 				setShowModal(false);
 				reset();
-			}, 4000);
+				setFormData({ name: '', email: '', message: '' }); // Manually reset form data
+			}, 5000);
 		}
 	}, [state.succeeded, reset]);
+
+   const handleChange = event => {
+			const { name, value } = event.target;
+			setFormData(prev => ({ ...prev, [name]: value }));
+		};
 
 	const inputStyle = `p-2 rounded-md lg:mx-2 ${isDark ? 'bg-white text-black' : 'bg-white text-[#071236] border border-[#071236]'}`;
 
@@ -27,7 +38,7 @@ export const Contact = () => {
 			<div className={`flex justify-center ${isDark ? 'bg-[#071236] text-white' : 'bg-[#7eaed2] text-[#071236]'}'}`}>
 				{showModal && (
 					<div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center'>
-						<div className='bg-white p-6 rounded shadow-lg'>
+						<div className='bg-white text-black p-6 rounded shadow-lg'>
 							<p>Thank you for reaching out! I look forward to discussing potential opportunities and projects with you soon.</p>
 						</div>
 					</div>
@@ -46,6 +57,8 @@ export const Contact = () => {
 						name='name'
 						aria-label='Name'
 						className={inputStyle}
+						value={formData.name}
+						onChange={handleChange}
 					/>
 					<ValidationError
 						prefix='Name'
@@ -63,6 +76,8 @@ export const Contact = () => {
 						name='email'
 						aria-label='Email Address'
 						className={inputStyle}
+						value={formData.email}
+						onChange={handleChange}
 					/>
 					<ValidationError
 						prefix='Email'
@@ -80,6 +95,8 @@ export const Contact = () => {
 						aria-label='Message'
 						style={{ height: '150px' }}
 						className={`${inputStyle} p-2 rounded-md text-black h-32`}
+						value={formData.message}
+						onChange={handleChange}
 					/>
 					<ValidationError
 						prefix='Message'

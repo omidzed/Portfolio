@@ -1,5 +1,5 @@
 import { useDarkMode } from '../../Hooks/useDarkMode';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaExternalLinkAlt } from 'react-icons/fa';
 
 type Props = {
 	className?: string;
@@ -13,10 +13,7 @@ export const About = ({ className = '' }: Props) => {
 	return (
 		<div className={`${isDark ? 'bg-[#071236] text-white' : 'bg-[#7eaed2] text-[#071236]'}`}>
 			<div className='flex flex-col items-center mt-5'>
-				<span
-					className='text-6xl lg:text-7xl font-semibold lg:tracking-wider'>
-					Omid Asadi
-				</span>
+				<span className='text-6xl lg:text-7xl font-semibold lg:tracking-wider'>Omid Asadi</span>
 				<span className='text-4xl lg:text-4xl mt-1 font-extralight tracking-tight lg:tracking-widest'>Full Stack Developer</span>
 				<span className='text-sm font-light mt-1 lg:text-lg lg:tracking-wide'>[ React | TypeScript | Node | PostgreSQL | AWS ]</span>
 				{resume && (
@@ -24,8 +21,12 @@ export const About = ({ className = '' }: Props) => {
 						href={'../Resume.pdf'}
 						target='_blank'
 						rel='noopener noreferrer'
-						className={`${isDark ? 'bg-[#071236] text-white' : 'bg-[#071236] text-white'} text-lg mt-8 px-10 py-2 border border-gray-400 hover:scale-105 transition ease-out duration-300 hover:bg-blue-600 hover:border-blue-700 text-white font-semibold rounded-lg tracking-widest`}>
+						className={`flex items-center ${isDark ? 'bg-[#071236] text-white' : 'bg-[#071236] text-white'} text-lg mt-8 px-10 py-2 border border-gray-400 hover:scale-105 transition ease-out duration-300 hover:bg-blue-600 hover:border-blue-700 text-white font-semibold rounded-lg tracking-widest`}>
 						View Resume
+						<FaExternalLinkAlt
+							className='inline-block align-text-bottom ml-2'
+							size={12}
+						/>
 					</a>
 				)}
 			</div>
@@ -50,10 +51,10 @@ export const About = ({ className = '' }: Props) => {
 				<div className={`${isDark ? 'border-gray-300' : 'border-[#071236]'} border-b mb-2`}></div>
 				<div className={`text-sm mt-6 mx-10 text-justify md:text-xl lg:font-extralight ${className}`}>
 					I am a Full Stack developer specializing in <strong className='font-bold'>React, TypeScript, Node.js, PostgreSQL</strong>, and <strong className='font-bold'>AWS</strong>.
-					My current interests include <strong className='font-bold'>Next.js</strong> and <strong className="font-bold">Python</strong>. I have about 2 years of experience in the industry and I have built applications
-					related to sports betting, cryptocurrency, and a productivity journal software.
+					My current interests include <strong className='font-bold'>Next.js</strong> and <strong className='font-bold'>Python</strong>. I have about 2 years of experience in the
+					industry and I have built applications related to sports betting, cryptocurrency, and a productivity journal software.
 				</div>
 			</div>
 		</div>
 	);
-}
+};

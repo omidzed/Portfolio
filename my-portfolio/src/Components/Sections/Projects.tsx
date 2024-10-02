@@ -16,11 +16,11 @@ export const Projects = () => {
 				rel='noopener noreferrer'
 				className='flex flex-col items-center cursor-pointer hover:text-blue-700 transition ease-in-out'>
 				<div className='flex items-center gap-2'>
+					<span className='text-2xl italic font-bold mb-1 tracking-wider'>Let's Parlay</span>
 					<FaExternalLinkAlt
 						className='inline-block align-text-bottom'
 						size={15}
 					/>
-					<span className='text-2xl italic font-bold mb-1 tracking-wider'>Let's Parlay</span>
 				</div>
 				<span className='text-sm tracking-tighter md:text-lg md:tracking-wide font-medium'>[ React | TypeScript | Node | Express | PostgreSQL | AWS ]</span>
 			</a>
@@ -38,11 +38,11 @@ export const Projects = () => {
 				rel='noopener noreferrer'
 				className='flex flex-col items-center cursor-pointer hover:text-blue-700'>
 				<div className='flex items-center gap-2 mt-20'>
+					<span className='text-2xl italic font-bold mb-1 tracking-wider'>Defi-City</span>
 					<FaExternalLinkAlt
 						className='inline-block align-text-bottom'
 						size={15}
 					/>
-					<span className='text-2xl italic font-bold mb-1 tracking-wider'>Defi-City</span>
 				</div>
 				<span className='text-sm tracking-tight md:text-lg md:tracking-wide font-medium'>[ React | TypeScript | Tailwind CSS | Vite | Vercel ]</span>
 			</a>
