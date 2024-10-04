@@ -98,14 +98,14 @@ const topics: Topic[] = [
 	},
 	{
 		id: 10,
-		title: 'AWS Elastic Compute Cloud',
-		content: '../AWS-EC2.png',
+		title: 'Elastic Compute Cloud',
+		content: '../aws-ec2.svg',
 		category: ['AWS'],
 	},
 	{
 		id: 11,
-		title: 'AWS Elastic Beanstalk',
-		content: '../aws-eb.png',
+		title: 'Elastic Beanstalk',
+		content: '../compute-aws-elastic-beanstalk.svg',
 		category: ['AWS'],
 	},
 	{
@@ -150,12 +150,13 @@ const topics: Topic[] = [
 		content: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
 		category: ['CORE LANGUAGES & TOOLS'],
 	},
-		{
+	{
 		id: 19,
 		title: 'Figma',
 		content: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg',
 		category: ['FRONT-END'],
-	},	{
+	},
+	{
 		id: 20,
 		title: 'PhotoShop',
 		content: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg',
