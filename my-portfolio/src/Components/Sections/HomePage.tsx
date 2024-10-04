@@ -147,7 +147,7 @@ const topics: Topic[] = [
 	{
 		id: 18,
 		title: 'AWS',
-		content: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+		content: 'amazonwebservices-plain-wordmark.svg',
 		category: ['CORE LANGUAGES & TOOLS'],
 	},
 	{
