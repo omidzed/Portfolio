@@ -33,26 +33,57 @@ export const SideBar = ({ className = '' }: Props) => {
 			<span className='font-semibold text-2xl lg:text-4xl whitespace-nowrap tracking-wider'>Omid Asadi</span>
 			<span className='whitespace-nowrap text-sm lg:text-xl text-center tracking-wider font-light'>Full Stack Developer</span>
 			<div className='flex gap-3 mt-2'>
-				<FaReact
-					size={25}
-					className={isDark ? 'text-[#58c4dc]' : 'text-[#071236]'}
-				/>
-				<SiTypescript
-					size={24}
-					className={isDark ? 'text-[#3684d8]' : 'text-[#071236]'}
-				/>
-				<FaNodeJs
-					size={26}
-					className={isDark ? 'text-green-500' : 'text-[#071236]'}
-				/>
-				<BiLogoPostgresql
-					size={27}
-					className={isDark ? 'text-[#c3dcf7]' : 'text-[#071236]'}
-				/>
-				<FaAws
-					size={28}
-					className={isDark ? 'text-[#ff9900]' : 'text-[#071236]'}
-				/>
+				<a
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:scale-125 transition duration-300">
+          <FaReact
+            size={25}
+            className={isDark ? 'text-[#58c4dc]' : 'text-[#071236]'}
+          />
+        </a>
+        <a
+          href="https://www.typescriptlang.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:scale-125 transition duration-300">
+          <SiTypescript
+            size={24}
+            className={isDark ? 'text-[#3684d8]' : 'text-[#071236]'}
+          />
+        </a>
+        <a
+          href="https://nodejs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:scale-125 transition duration-300">
+          <FaNodeJs
+            size={26}
+            className={isDark ? 'text-green-500' : 'text-[#071236]'}
+          />
+        </a>
+        <a
+          href="https://www.postgresql.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:scale-125 transition duration-300">
+          <BiLogoPostgresql
+            size={27}
+            className={isDark ? 'text-[#c3dcf7]' : 'text-[#071236]'}
+          />
+        </a>
+        <a
+          href="https://aws.amazon.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:scale-125 transition duration-300">
+          <FaAws
+            size={28}
+            className={isDark ? 'text-[#ff9900]' : 'text-[#071236]'}
+          />
+        </a>
+
 			</div>
 			<nav className='hidden lg:flex lg:flex-col lg:text-center gap-3 mt-10 font-semibold'>
 				{menuItems.map(menuItem => (
