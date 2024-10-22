@@ -52,7 +52,7 @@ export const NavBar = ({ onNavClick }: NavBarProps) => {
 					/>
 				</div>
 			)}
-			<div className="hover:scale-110 transition ease-in-out mt-7">
+			<div className="hover:scale-110 transition ease-in-out lg:mt-7">
 				<DarkModeSwitch
 					className='mr-4 '
 					checked={!isDark}

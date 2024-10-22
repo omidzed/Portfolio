@@ -13,7 +13,7 @@ export const About = ({ className = '' }: Props) => {
 	return (
 		<div className={`${isDark ? 'bg-[#071236] text-white' : 'bg-[#7eaed2] text-[#071236]'}`}>
 			<div className='flex flex-col items-center'>
-				<span className='text-6xl lg:text-7xl font-semibold lg:tracking-wider'>Omid Asadi</span>
+				<span className='mt-6 md:mt-0 text-6xl lg:text-7xl font-semibold lg:tracking-wider'>Omid Asadi</span>
 				<span className='text-4xl lg:text-4xl mt-1 font-extralight tracking-tight lg:tracking-widest'>Full Stack Developer</span>
 				<span className='text-sm font-light mt-1 lg:text-lg lg:tracking-wide'>[ React | TypeScript | Node | PostgreSQL | AWS ]</span>
 				{resume && (
