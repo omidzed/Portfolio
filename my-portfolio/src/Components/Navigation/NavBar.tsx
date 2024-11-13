@@ -35,7 +35,7 @@ export const NavBar = ({ onNavClick }: NavBarProps) => {
 			)}
 			<div className='block lg:hidden'>
 				<BiMenuAltLeft
-					size={30}
+					size={32}
 					color={isDark ? 'white' : '#071236'}
 				/>
 			</div>
@@ -55,7 +55,7 @@ export const NavBar = ({ onNavClick }: NavBarProps) => {
 					className='mr-4 '
 					checked={!isDark}
 					onChange={toggleDarkMode}
-					size={25}
+					size={23}
 					moonColor='#071236'
 					sunColor='yellow'
 				/>
