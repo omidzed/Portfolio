@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Spin as Hamburger } from 'hamburger-react';
+import { BiMenuAltLeft } from 'react-icons/bi';
 import { AppDrawer } from '../Menu/MenuDrawer';
 import { Overlay } from '../Menu/Overlay';
 import { MenuItem } from '../../utils/data-types';
@@ -34,10 +34,8 @@ export const NavBar = ({ onNavClick }: NavBarProps) => {
 				/>
 			)}
 			<div className='block lg:hidden'>
-				<Hamburger
-					size={20}
-					toggled={isOpen}
-					toggle={setIsOpen}
+				<BiMenuAltLeft
+					size={30}
 					color={isDark ? 'white' : '#071236'}
 				/>
 			</div>
@@ -52,7 +50,7 @@ export const NavBar = ({ onNavClick }: NavBarProps) => {
 					/>
 				</div>
 			)}
-			<div className="hover:scale-110 transition ease-in-out lg:mt-7">
+			<div className='hover:scale-110 transition ease-in-out lg:mt-7'>
 				<DarkModeSwitch
 					className='mr-4 '
 					checked={!isDark}
