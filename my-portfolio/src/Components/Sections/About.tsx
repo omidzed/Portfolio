@@ -49,10 +49,10 @@ export const About = ({ className = '' }: Props) => {
 			<div>
 				<div className='mb-1 mt-20 md:mt-28 text-2xl'>About</div>
 				<div className={`${isDark ? 'border-gray-300' : 'border-[#071236]'} border-b mb-2`}></div>
-				<div className={`text-sm mt-6 mx-10 text-justify md:text-xl lg:font-extralight ${className}`}>
-					I am a Full Stack developer specializing in <strong className='font-bold'>React, TypeScript, Node.js, PostgreSQL</strong>, and <strong className='font-bold'>AWS</strong>.
-					My current interests include <strong className='font-bold'>Next.js</strong> and <strong className='font-bold'>Python</strong>. I have about 2 years of experience in the
-					industry and I have built applications related to sports betting, cryptocurrency, and a productivity journal software.
+				<div className={`mt-6 font-extralight text-justify  md:text-lg mb-2 mx-10 ${className}`}>
+					Hi, I'm Omid, a Full Stack Developer specializing in <strong className='font-bold'>React, TypeScript, Node.js, PostgreSQL</strong>, and{' '}
+					<strong className='font-bold'>AWS</strong>. My current interests include <strong className='font-bold'>Next.js</strong> and <strong className='font-bold'>Python</strong>.
+					I have about 2 years of experience in the industry and I have built applications related to sports betting, cryptocurrency, and a productivity journal software.
 				</div>
 			</div>
 		</div>

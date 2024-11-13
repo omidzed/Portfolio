@@ -34,10 +34,12 @@ export const NavBar = ({ onNavClick }: NavBarProps) => {
 				/>
 			)}
 			<div className='block lg:hidden'>
-				<BiMenuAltLeft
-					size={32}
-					color={isDark ? 'white' : '#071236'}
-				/>
+				<button onClick={toggleMenu}>
+					<BiMenuAltLeft
+						size={32}
+						color={isDark ? 'white' : '#071236'}
+					/>
+				</button>
 			</div>
 			{isOpen && (
 				<div>
