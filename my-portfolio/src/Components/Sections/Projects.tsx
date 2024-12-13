@@ -11,7 +11,7 @@ export const Projects = () => {
 			<h1 className='text-2xl text-justify mb-1 mt-20 md:mt-28 '>Projects</h1>
 			<div className={`${isDark ? 'border-gray-300' : 'border-[#071236]'} border-b mb-10`}></div>
 			<a
-				href='www.lets-parlay.omid-develops.com/'
+				href='http://lets-parlay.omid-develops.com/'
 				target='_blank'
 				rel='noopener noreferrer'
 				className='flex flex-col items-center cursor-pointer hover:text-blue-700 transition ease-in-out'>
