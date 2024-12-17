@@ -30,7 +30,7 @@ export const About = ({ className = '' }: Props) => {
 					</a>
 				)}
 			</div>
-			<div className=' md:hidden flex justify-center gap-4 mt-10'>
+			<div className=' lg:hidden flex justify-center gap-4 mt-10'>
 				<a
 					className='hover:text-yellow-300 transition ease-in-out duration-300 hover:scale-105'
 					href='https://github.com/omidzed'
