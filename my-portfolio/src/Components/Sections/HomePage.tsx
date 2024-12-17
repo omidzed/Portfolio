@@ -17,10 +17,10 @@ export const HomePage = () => {
 			className={`min-h-screen min-w-full container px-5 transition-colors duration-300
 		 ${isDark ? 'bg-[#071236] text-white' : 'bg-[#7eaed2] text-[#071236]'}`}>
 			<div className='flex flex-col md:flex-row md:gap-20'>
-				<div className='hidden md:block md:w-1/5 lg:w-[35%]'>
+				<div className='hidden lg:block lg:w-[35%]'>
 					<SideBar />
 				</div>
-				<div className='w-full md:w-3/5 lg:w-[40%] lg:mt-10'>
+				<div className='w-full lg:w-[40%] lg:mt-10'>
 					<div ref={homeRef}></div>
 					<div ref={aboutRef}>
 						<About isDark={isDark} />
