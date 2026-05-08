@@ -18,7 +18,7 @@ export const About = ({ className = '' }: Props) => {
 				<span className='text-sm font-light mt-1 lg:text-lg lg:tracking-wide'>[ React | TypeScript | Node | PostgreSQL | AWS ]</span>
 				{resume && (
 					<a
-						href={'../Resume.pdf'}
+						href={'../Omid_Asadi_Resume.pdf'}
 						target='_blank'
 						rel='noopener noreferrer'
 						className={`flex items-center ${isDark ? 'bg-[#071236] text-white' : 'bg-[#071236] text-white'} text-lg mt-8 px-10 py-2 border border-gray-400 hover:scale-105 transition ease-out duration-300 hover:bg-blue-600 hover:border-blue-700 text-white font-semibold rounded-lg tracking-widest`}>
